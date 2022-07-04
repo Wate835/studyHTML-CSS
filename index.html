@@ -7,28 +7,29 @@
     <title>Антон Кудрявцев</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="hiddennavbar.css"> -->
 </head>
 <body>
-    <input type="checkbox" id="nav-toggle" hidden>
+    <!-- <input type="checkbox" id="nav-toggle" hidden> -->
     <!-- 
     Выдвижную панель размещаете ниже
     флажка (checkbox), но не обязательно 
     непосредственно после него, например
     можно и в конце страницы
     -->
-    <nav class="nav">
+    <!-- <nav class="nav"> -->
         <!-- 
     Метка с именем `id` чекбокса в `for` атрибуте
     Символ Unicode 'TRIGRAM FOR HEAVEN' (U+2630)
     Пустой атрибут `onclick` используем для исправления бага в iOS < 6.0
     См: http://timpietrusky.com/advanced-checkbox-hack 
     -->
-        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <!-- <label for="nav-toggle" class="nav-toggle" onclick></label> -->
         <!-- 
     Здесь размещаете любую разметку,
     если это меню, то скорее всего неупорядоченный список <ul>
     -->
-        <h2 class="logo"> 
+        <!-- <h2 class="logo"> 
             <a href="//dbmast.ru/">Антон</a> 
         </h2>
         <ul>
@@ -40,13 +41,13 @@
             <li><a href="#6">Шесть</a>
             <li><a href="#7">Семь</a> 
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- Маска (затемнение) основного контента при включенной панели
     по-умолчанию данная фишка не используется, если оно вам надо,
 		просто расккоментируйте div-контейнер ниже -->
 		
-    <div class="mask-content"></div>
+    <!-- <div class="mask-content"></div> -->
 
     <div class="container">
         <div class="info">
@@ -70,7 +71,7 @@
         <div class="info">
             <div class="card hobby">
                 <p><strong>Мои хобби:</strong></p>
-                <ul>
+                <ul class="list">
                     <li>Монтаж видео</li>
                     <li>Компьютерные игры</li>
                     <li>Писательство</li>
@@ -78,7 +79,7 @@
             </div>
                 <div class="card work">
                     <p><strong>Опыт работы:</strong></p>
-                    <table>
+                    <table class="table">
                         <thead>
                             <th>Название</th>
                             <th>Должность</th>
@@ -106,24 +107,26 @@
                     </table>
                 </div>
         </div>
-        <div>
-                <p><strong>Обратная связь</strong></p>
-            <div>
-                <input type="text" name="" id="" placeholder="Введите ваше имя">
+    
+        <form action="/" class="form">
+                <h2><strong>Обратная связь</strong></h2>
+            <div class="form-row">   
+                <div class="form-group">
+                    <input type="text" name="" id="" placeholder="Введите ваше имя">
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="" id="" placeholder="Введите ваш email">
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea name="" id="" placeholder="Введите ваше сообщение"></textarea>
             </div>
 
             <div>
-                <input type="email" name="" id="" placeholder="Введите ваш email">
+                <button class="btn" type="submit">Отправить!</button>
             </div>
-
-            <div>
-                <textarea name="" id="" cols="30" rows="3" placeholder="Введите ваше сообщение"></textarea>
-            </div>
-
-            <div>
-                <button type="submit">Отправить!</button>
-            </div>
-        </div>
+        </form>
     </div>
 </body>
 </html>
